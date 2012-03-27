@@ -1,0 +1,25 @@
+-# in app/views/movies/similar.html.haml
+
+%h2 Similar movies to #{@movie.title}
+
+-#%ul#similar_movies
+-# - @movies.each do |movie|
+-#    %li
+-#      = @movie.title
+-#    %li
+-#      Rating:
+-#      = @movie.rating
+-#    %li
+-#      Released on:
+-#      = @movie.release_date.strftime("%B %d, %Y")
+-#    %li
+-#      Director:
+-#      = @movie.Director
+  
+- @movies.each do |movie|
+  = movie.title
+  = movie.rating
+  = movie.release_date.strftime("%B %d, %Y")
+  = movie.Director
+
+End of page
